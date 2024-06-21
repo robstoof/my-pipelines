@@ -24,7 +24,7 @@ class Pipeline:
 
         Settings.embed_model = OllamaEmbedding(
             model_name="nomic-embed-text",
-            base_url="http://localhost:11434",
+            base_url="http://host.docker.internal:11434",
         )
         Settings.llm = Ollama(model="llama3")
 

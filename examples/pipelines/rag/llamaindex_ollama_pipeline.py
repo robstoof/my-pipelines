@@ -31,7 +31,7 @@ class Pipeline:
         # This function is called when the server is started.
         global documents, index
 
-        self.documents = SimpleDirectoryReader("./data").load_data()
+        self.documents = SimpleDirectoryReader("/app/data").load_data()
         self.index = VectorStoreIndex.from_documents(self.documents)
         pass
 

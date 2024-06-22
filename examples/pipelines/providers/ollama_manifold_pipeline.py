@@ -24,7 +24,7 @@ class Pipeline:
         # Optionally, you can set the name of the manifold pipeline.
         self.name = "Ollama: "
 
-        self.valves = self.Valves(**{"OLLAMA_BASE_URL": "http://localhost:11435"})
+        self.valves = self.Valves(**{"OLLAMA_BASE_URL": "http://host.docker.internal:11434"})
         self.pipelines = []
         pass
 

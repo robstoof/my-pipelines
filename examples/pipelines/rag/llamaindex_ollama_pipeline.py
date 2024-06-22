@@ -32,6 +32,7 @@ class Pipeline:
         global documents, index
 
         self.documents = SimpleDirectoryReader("/app/data").load_data()
+        print(self.documents)
         self.index = VectorStoreIndex.from_documents(self.documents)
         pass
 
@@ -47,7 +48,7 @@ class Pipeline:
 
         print(messages)
         print(user_message)
-
+        print("jaja")
         query_engine = self.index.as_query_engine(streaming=True)
         response = query_engine.query(user_message)
 

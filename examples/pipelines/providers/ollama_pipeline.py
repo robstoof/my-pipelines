@@ -30,7 +30,7 @@ class Pipeline:
         print(f"pipe:{__name__}")
 
         OLLAMA_BASE_URL = "http://host.docker.internal:11434"
-        MODEL = "llama3"
+        MODEL = "aya:latest"
 
         if "user" in body:
             print("######################################")
